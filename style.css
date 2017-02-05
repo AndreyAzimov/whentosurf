@@ -1,0 +1,228 @@
+/** {
+    border-style: solid;
+}*/
+
+
+h1 { 
+background: #fff;
+    color: #59a7f6;
+    padding: 0.5em;
+    display: table;
+    margin: 0 auto;
+    display: none;
+} |   
+
+h2 {
+    background: #fff;
+    color: #59a7f6;
+    padding: 0.5em;
+    display: table;
+    margin: 0 auto;
+    display: none;
+}
+
+body {
+background: #0c1a1f;
+    font-family: "helvetica neue", "Arial";
+    background-size: cover;
+    color: #fff;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.alldata {
+    position:fixed;
+    top: 6vh;
+    left:4vw;
+    text-align:left;
+    display:inline-block;
+
+    font-weight: bold;
+}
+
+#details {
+    padding-top: 60vh;
+    text-align:center;
+}
+
+#weatherIconDegree {
+    padding-top: 2vh;
+    font-size:2em;
+    color: #6b6f70;
+    display:block;
+}
+
+#locationName {
+    padding-top: 2vh;
+    font-size:2em;
+    text-align:left;
+    display:block;
+}
+
+
+#best {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-style: italic;
+    align-self: center;
+    display:inline-block;
+    font-size: 1em;
+    display:block;
+
+}
+
+#time {
+    display:inline-block;
+    font-size: 3em;
+    color: white;
+
+}
+
+#stars {
+    padding-top: 1vh;
+    text-align: left;
+    display:block;
+    font-size: 2em;
+
+}
+
+.recom {
+    padding-top: 2vh;
+    text-align: left;
+    display:inline-block;
+    font-style: italic;
+}
+
+#circleMini {
+    font-size:1em;
+    text-align:left;
+
+    width: 10px;
+    height: 10px;
+    background: #8bc34a;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+
+    display:inline-block;
+}
+
+#recomendation {
+    font-size:1em;
+    text-align:left;
+    vertical-align:middle;
+    margin-left:0.25em;
+    display:inline-block;
+}
+
+.circle {
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align:middle;
+    border-color: #2dafe6;
+    border-width: 3px;
+    text-align:left;
+}
+
+.background-circle {
+    height: 200px;
+    width: 200px;
+}
+
+.waves {
+    padding-top: 2vh;
+    text-align: left;
+}
+
+.circle img {
+    border-radius: 50%;
+    display: block;
+}
+
+#wavesHeight {
+    font-size:4em;
+    vertical-align:middle;
+    margin:0;
+    margin-left:0.25em;
+    display:inline-block;
+    text-align:left;    
+}
+
+#ft-m {
+    font-size:1em;
+    display:inline-block;
+    vertical-align:bottom;
+    text-align:left;
+}
+
+
+.bg {
+    /*background-image:url('https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1024&h=768&fit=crop&s=01370a0807302120e83ed2f984f12cb6');*/
+   background-image:url('./img/background-wave.jpg');
+    /*background-image:url('http://bestanimations.com/Nature/Water/wave-ocean-animated-gif-6.gif')*/
+    /*background-image:url('https://media.tenor.co/images/803ae3a6e74d9415523d2f7036bcecd6/raw');*/
+
+    width:120vw;
+    height:120vh;
+    position:fixed;
+    top:-5vh;
+    right:0;
+    z-index:-1;
+    opacity:0.7;
+    background-size:cover;
+    filter:blur(4px);
+    -webkit-filter:blur(5px);
+}
+
+.wind {
+    padding-top: 2vh;
+    font-size:1.5em;
+    display:inline-block;
+    vertical-align:bottom;
+}
+
+#wind-icon {
+    color: #2dafe6;
+    display:inline-block;
+}
+
+#wind-speed {
+    display:inline-block;
+}
+
+#wind-direction-icon {
+    display:inline-block;
+    font-size: 1.5em;
+    vertical-align:middle;
+}
+
+#wind-onshore {
+    display:inline-block;
+    font-size: 0.7em;
+}
+
+
+
+
+
+
+
+/*#chartContainer {
+    position:fixed;
+    bottom:-5vw;
+    left:-4vw;
+    height:30vw;
+    width: 105vw;
+}*/
+
+
+
+
+
+/*@media (max-height:550px) {
+    body {
+        border:10px solid red;
+    }
+}*/

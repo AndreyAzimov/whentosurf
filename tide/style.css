@@ -1,0 +1,99 @@
+/** {
+    border-style: solid;
+}*/
+
+
+h1 { 
+background: #fff;
+    color: #59a7f6;
+    padding: 0.5em;
+    display: table;
+    margin: 0 auto;
+    display: none;
+} |   
+
+h2 {
+    background: #fff;
+    color: #59a7f6;
+    padding: 0.5em;
+    display: table;
+    margin: 0 auto;
+    display: none;
+}
+
+body {
+background: #0c1a1f;
+    font-family: "helvetica neue";
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#alldata {
+    padding-top: 10vh;
+
+    display:inline-block;
+}
+
+#today_date {
+    font-weight: bold;
+    padding-top: 2vh;
+    font-size:3em;
+    text-align:center;
+    display:block;
+}
+
+#tide_table {
+    width: 100%;
+    padding-top: 1vh;
+    font-size:1.2em;
+    text-align:center;
+}
+
+#table_column_names {
+    background-color: gray;
+    padding:8px;
+
+}
+
+#table_rows {
+    background-color: #e6952e;
+    padding:8px;
+
+}
+
+#location {
+    padding-top: 7vh;
+    font-size:1em;
+    text-align:center;
+    display:block;
+}
+
+#sunrise {
+    padding-top: 3vh;
+    font-size:1em;
+    text-align:center;
+    display:block;
+}
+
+
+
+.bg {
+    background-image:url('https://images.unsplash.com/photo-1452723312111-3a7d0db0e024?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1024&h=768&fit=crop&s=01370a0807302120e83ed2f984f12cb6');
+    /*background-image:url('../img/background-wave.jpg');*/
+    /*background-image:url('http://bestanimations.com/Nature/Water/wave-ocean-animated-gif-6.gif');*/
+    /*background-image:url('https://media.tenor.co/images/803ae3a6e74d9415523d2f7036bcecd6/raw');*/
+
+    width:120vw;
+    height:120vh;
+    position:fixed;
+    top:-5vh;
+    right:0;
+    z-index:-1;
+    opacity:0.7;
+    background-size:cover;
+    filter:blur(4px);
+    -webkit-filter:blur(5px);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+
+
+
+
+<!-- start feedback button -->
+<div id="feedbackcontainer" style="position: fixed; right: 0px; bottom: 80px; background: none; height: 120px; width: 40px; font-size: 14px; font-family: Arial, sans-serif;">
+	<button id="feedbackbutton" style="transform: rotate(-90.0deg); background: #1377BC; border-radius: 4px; width: 120px; border: solid 1px #e3e3e3; letter-spacing: 1; padding: 5px 5px; color: #FFF; font-weight: bold; cursor: pointer; float: right; margin-top: 45px; margin-right: -45px" onclick="extendFeedback();">Feedback</button>
+	<div id="feedbackform" style="display: none; position: relative; top: -70px; left: 5px">
+		<input type="text" id="feedbackemail" name="email" placeholder="your@email.com" style="width: 290px; border-radius: 3px; padding: 2px; margin-bottom: 5px;" /><br>
+		<textarea id="feedbackmessage" style="width: 290px; height: 150px; border-radius: 3px; padding: 2px; margin-bottom: 5px; font-size: 12px; font-family: Arial, sans-serif;"></textarea><br>
+		<button onclick="submitFeedback();" style="background: #1377BC; border-radius: 4px; width: 120px; border: solid 1px #e3e3e3; color: #FFF; font-weight: bold; cursor: pointer;">Send</button>
+	</div>
+</div>
+
+<script>
+var feedbackform_url = 'contact.php';
+var feedbackform_emailsubject = 'Feedback Form';
+
+var feedbackform_fc = document.getElementById('feedbackcontainer');
+var feedbackform_fb = document.getElementById('feedbackbutton');
+var feedbackform_ff = document.getElementById('feedbackform');
+var feedbackform_fe = document.getElementById('feedbackemail');
+var feedbackform_fm = document.getElementById('feedbackmessage');
+function extendFeedback() {
+	feedbackform_fc.style.background = '#EEF';
+	feedbackform_fc.style.width = '320px';
+	feedbackform_fc.style.height = '240px';
+	feedbackform_fc.style.bottom = '5px';
+	feedbackform_fb.style.marginRight = '272px'
+	feedbackform_ff.style.display = 'block';
+	feedbackform_fb.onclick = function() { closeFeedback(); }
+}
+function closeFeedback() {
+	feedbackform_fc.style.background = 'none';
+	feedbackform_fc.style.width = '40px';
+	feedbackform_fc.style.height = '120px';
+	feedbackform_fc.style.bottom = '80px';
+	feedbackform_fb.style.marginRight = '-45px'
+	feedbackform_ff.style.display = 'none';
+	feedbackform_fb.onclick = function() { extendFeedback(); }
+}
+function submitFeedback() {
+	if (feedbackform_fe.value.indexOf('@') == -1) { alert('You need to enter a valid email address'); return; }
+	feedbackform_ff.innerHTML = '<p style="text-align: center; font-size: 16px; margin-top: 20px;">Message Sent</p>';
+	setTimeout(function() { closeFeedback(); }, 2000);
+
+	// Ajax Post
+	var feedbackform_lookup = "email=" + encodeURIComponent(feedbackform_fe.value) + '&subject=' + encodeURIComponent(feedbackform_emailsubject) + '&message=' + encodeURIComponent(feedbackform_fm.value); // $_POST['email']
+	if (window.XMLHttpRequest) { feedbackform_xmlhttp=new XMLHttpRequest(); } else { feedbackform_xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); }
+	feedbackform_xmlhttp.onreadystatechange=function() {
+		if (feedbackform_xmlhttp.readyState==4 && feedbackform_xmlhttp.status==200) {
+			console.log(feedbackform_xmlhttp.responseText);
+		}
+	}
+	feedbackform_xmlhttp.open("POST",feedbackform_url,true);
+	feedbackform_xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	feedbackform_xmlhttp.setRequestHeader("Content-length", feedbackform_lookup.length);
+	feedbackform_xmlhttp.setRequestHeader("Connection", "close");
+	feedbackform_xmlhttp.send(feedbackform_lookup);
+}
+</script>
+<!-- end feedback button -->
+
+
+
+
+
+
+
+</body>
+</html>
