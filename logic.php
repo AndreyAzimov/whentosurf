@@ -49,7 +49,7 @@ else {
 
   //$location = "52.372433,4.893801";
 
-  $key_google_dev = "AIzaSyDLyA12LK1g5WQmpHm63LHd0tepWGpOERc";
+  $key_google_dev = "ADD YOUR KEY";
 
   $url_2 ='https://maps.googleapis.com/maps/api/geocode/json?latlng=' . $location . '&key=' . $key_google_dev;
 
@@ -97,7 +97,8 @@ $responseStyle = 'short'; // the length of the response
 $citySize = 'cities15000'; // the minimal number of citizens a city must have
 $radius = 30; // the radius in KM
 $maxRows = 5; // the maximum number of rows to retrieve
-$username = 'whentos'; // the username of your GeoNames account
+
+$username = 'ADD YOUR USER'; // the username of your GeoNames account
 
 // get nearby cities based on range as array from The GeoNames API
 
@@ -138,8 +139,7 @@ $tomorrow_formated = $tomorrow->format('l, F jS');
 
 // GET WEATHER INFO
 
-//$key_world_weather = "add8f9d830d34b52ac3181839170102";
-$key_world_weather = "7492d7b146cb429887f204111170202";
+$key_world_weather = "ADD YOUR KEY";
 
 $apiUrl='http://api.worldweatheronline.com/premium/v1/marine.ashx?key=' . $key_world_weather . '&q=' . $location .'&format=json&tide=yes&tp=1&date='. $tomorrow_for_json;
 
