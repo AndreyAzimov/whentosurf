@@ -5,4 +5,4 @@ You need just PHP server to run all this.
 
 P.S. Code is super hardcore. Enjoy.
 
-![home](https://github.com/andreyazimov/whentosurf/yes.jpg)
+![home](https://github.com/AndreyAzimov/whentosurf/blob/master/yes.jpg)
