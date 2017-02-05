@@ -7,7 +7,10 @@ And also wrote a story how I done this app on [Medium](https://medium.com/@Andre
 
 
 
-You need just PHP server to run all this.
+You need just PHP server to run all this. Add change following API keys in logic.php to your.
+- $key_world_weather
+- $key_google_dev
+- $usernam
 
 P.S. Code is super hardcore. Enjoy.
 
